@@ -1,0 +1,60 @@
+;; ***********************************************
+;; * PROGRAM:      lisp.txt                      *
+;; * DESCRIPTION:  Appointment Book (LISP)       *
+;; * CREATED BY:   Gabrielle Angeles             *
+;; *               Janelle Fernandez             *
+;; * DATE CREATED: 30 March 2019                 *
+;; ***********************************************
+
+(defun menu()
+  (print "*******************************")
+  (print "*                             *")
+  (print "*  MY APPOINTMENT BOOK v.1.0  *")
+  (print "*                             *")
+  (print "*******************************")
+  (print "Menu: ")
+  (print "1. Display all appointments")
+  (print "2. Create a new appointment")
+  (print "3. Remove a specific appointment ")
+  (print "4. Clear all appointments for a given day")
+  (print "5. Exit the program")
+  (print "--------------------------------")
+  (print "Enter Choice: ")
+    (setq choice (read))
+    (cond ((= choice 1)
+            (getAppointments)
+          )
+          ((= choice 2)
+            (addAppointment)
+          )
+          ((= choice 3)
+            (removeAppointment)
+          )
+          ((= choice 4)
+            (clearAppointments)
+          )
+          ((= choice 5)
+            (exit)
+          )
+
+          (t (print "Invalid Input, Press any key to continue") (menu) ))
+)
+
+(defun getAppointments()
+  (print "Display all appointments here...")
+)
+
+(defun addAppointment()
+  (print "Add Appointments here...")
+)
+
+(defun removeAppointment()
+  (print "Remove a appointment here...")
+)
+
+(defun clearAppointments()
+  (print "Clear all appointments for a given day here...")
+)
+
+)
+  (menu)
